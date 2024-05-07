@@ -1,4 +1,6 @@
 #define TAM 50
-typedef cad char[TAM];
+
+
+typedef char cad[TAM];
 
 void leeCad(char cad[],int tam);
