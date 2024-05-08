@@ -1,6 +1,4 @@
 #include "TAD_TVec.h"
-#include <string.h>
-#include <stdio.h>
 
 tSet newSet() {
 	tSet conjunto;

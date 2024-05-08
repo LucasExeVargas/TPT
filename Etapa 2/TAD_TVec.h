@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include <string.h>
+
 #include "TAD_TCad.h"
 #define SIZE_V 100
 

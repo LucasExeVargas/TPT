@@ -1,5 +1,4 @@
 #include "TAD_TCad.h"
-#include <stdio.h>
 
 void leecad(int tam, cad cad){
 	int j = 0, m;
