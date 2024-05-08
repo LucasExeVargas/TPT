@@ -2,5 +2,4 @@
 
 
 typedef char cad[TAM];
-
-void leeCad(char cad[],int tam);
+void leecad(int tam, cad cad);
