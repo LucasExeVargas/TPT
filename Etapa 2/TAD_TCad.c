@@ -1,17 +1,15 @@
 #include "TAD_TCad.h"
 #include <stdio.h>
 
-void leeCad(char cad[],int tam){
-	int j=0;
-	char c;
-	c=getchar();
-	while(c!=EOF && c!= '\n' && j < tam-1){
-		cad[j]=c;
-		c=getchar();
+void leecad(int tam, cad cad){
+	int j = 0, m;
+	fflush(stdin);
+	while(j<tam-1 && (m=getchar())!= EOF && m != '\n'){
+		cad[j] = m;
 		j++;
 	}
-	cad[j]='\0';
-	while(c!=EOF && c!='\n'){
-		c=getchar();
-	}
+	cad[j] = '\0';
+	if(m!= EOF && m != '\n')
+		while((m=getchar()) != EOF && m != '\n');
 }
+	
