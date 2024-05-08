@@ -3,12 +3,10 @@
 tSet newSet() {
 	tSet conjunto;
 	conjunto.size = 0; // Inicializa el tamaño del conjunto a 0
-	
 	// Inicializar el arreglo `lis`
 	for (int i = 0; i < SIZE_V; i++) {
 		conjunto.lis[i] = NULL;
 	}
-	
 	return conjunto;
 }
 
@@ -22,21 +20,22 @@ void eliminarPrimerUltimoCaracter(char* cadena){
 	}
 }
 	
-	
-void fillSet(tSet *A, char *s){
+void fillSet(tSet *A, char *s) {
+
+	int i = 0;
 	tCad vectorDeConjunto;
-	
-	fgets(s, SIZE_V, stdin);
-	for(int i = 0 ; i < SIZE_V ; i++){
+	for (int i = 0; i < TAM; i++) {
 		vectorDeConjunto[i] = strtok(i == 0 ? s : NULL, ",");
-		if(vectorDeConjunto[i] != NULL){
-			A->size++;
-			strcpy(A->lis[A->size] , vectorDeConjunto[i]);
-		}else break;
+		if (vectorDeConjunto[i] == NULL)
+			break;
 	}
-	
-}
-	
+	// Dividir la cadena s en elementos separados por comas
+	for (int j = 0; vectorDeConjunto[j]!=NULL; j++){
+		A->lis[i] = strdup(vectorDeConjunto[j]);
+		i++;
+	}
+	A->size = i; // Actualizar el tamaño del conjunto
+}	
 void printSet(tSet conjunto){
 	printf("\n{");
 	printf("%s",conjunto.lis[0]);
